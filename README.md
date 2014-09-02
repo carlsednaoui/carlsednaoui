@@ -14,3 +14,21 @@ This is my personal site, which is hosted on [GitHub Pages](https://pages.github
 - Everything is written in `Jade` and `Stylus`
 - There's a `Gulp` task that builds the site and dumps all the files inside the `public` folder
 - Use `npm run deploy` to move all the content of `public` into the `GH-Pages` branch
+
+### Difference in branches
+The `Master` branch and the `GH-Pages` branch have a few key difference:
+- `Master` contains:
+    - This README
+    - A `source` folder where all the uncompiled files go
+    - A `gulp` script that compiles all the files
+    - `index.js`, a simple server
+    - `package.json`, some basic Node configuration
+- `GH-Pages` contains:
+    - `CNAME` file, used for GitHub hosting
+
+Both branches have the same `.gitignore` which includes:
+- `.DS_Store`
+- `npm-debug.log`
+- `public`
+- `node_modules`
+    
