@@ -1,0 +1,25 @@
+{
+  "name": "carlsednaoui",
+  "version": "0.0.0",
+  "description": "Carl Sednaoui's personal site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/carlsednaoui/carlsednaoui.git"
+  },
+  "author": "Carl Sednaoui <carlsed@gmail.com> (http://www.carlsednaoui.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlsednaoui/carlsednaoui/issues"
+  },
+  "homepage": "http://www.carlsednaoui.com/",
+  "devDependencies": {
+    "gulp": "^3.8.7",
+    "gulp-autoprefixer": "0.0.10",
+    "gulp-jade": "^0.7.0",
+    "gulp-stylus": "^1.3.0"
+  }
+}
