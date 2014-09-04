@@ -21,10 +21,9 @@ gulp.task('default', function() {
 
 });
 
-// rerun the task when a file changes
-// gulp.task('watch', function () {
-//   gulp.watch('source/templates/*.jade', ['default']);
-//   gulp.watch('source/styles/*.styl', ['default']);
-//   gulp.watch('source/scripts/*.js', ['default']);
-//   gulp.watch('source/scripts/lib/*.js', ['default']);
-// });
+// rerun default task whenever a file changes
+gulp.task('watch', function () {
+  gulp.watch('source/templates/**/*.jade', ['default']);
+  gulp.watch('source/styles/*.styl', ['default']);
+  gulp.watch('source/scripts/**/*.js', ['default']);
+});
