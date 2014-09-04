@@ -1,7 +1,11 @@
-extends partials/_template
+extends partials/_homepage
 
 block head
   title foo
 
 block content
-  p carl sednaoui yo
+  p carl sednaoui yo la
+
+  for post in posts
+    li
+      p= post

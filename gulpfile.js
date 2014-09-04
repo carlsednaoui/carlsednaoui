@@ -4,8 +4,10 @@ var gulp = require('gulp')
 , prefix = require('gulp-autoprefixer');
 
 gulp.task('default', function() {
+  var posts = [1,2,3]
+
   gulp.src('source/templates/*.jade')
-    .pipe(jade({ pretty: true }))
+    .pipe(jade({ pretty: true, locals: {posts: posts} }))
     .pipe(gulp.dest('public'));
 
   gulp.src('source/styles/*.styl')
