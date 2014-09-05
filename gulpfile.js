@@ -17,9 +17,6 @@ gulp.task('default', function() {
     posts.push({ title: title, href: '/posts/' + el });
   })
 
-
-
-
   gulp.src('source/templates/*.jade')
     .pipe(jade({ pretty: true, locals: {posts: posts} }))
     .pipe(gulp.dest('public'));

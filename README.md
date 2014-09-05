@@ -32,3 +32,6 @@ Both branches have the same `.gitignore` which includes:
 - `public`
 - `node_modules`
     
+### Jade documentation
+- [http://naltatis.github.io/jade-syntax-docs/](http://naltatis.github.io/jade-syntax-docs/)
+- [http://jade-lang.com/reference/includes/](http://jade-lang.com/reference/includes/)
