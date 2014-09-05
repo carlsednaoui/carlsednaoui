@@ -10,6 +10,10 @@ gulp.task('default', function() {
     .pipe(jade({ pretty: true, locals: {posts: posts} }))
     .pipe(gulp.dest('public'));
 
+  gulp.src('source/templates/posts/*.jade')
+    .pipe(jade({ pretty: true, locals: {posts: posts} }))
+    .pipe(gulp.dest('public/posts'));
+
   gulp.src('source/styles/*.styl')
     .pipe(stylus({errors: true}))
     .pipe(prefix())
