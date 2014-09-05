@@ -6,14 +6,15 @@ var gulp = require('gulp')
 
 gulp.task('default', function() {
   // get latest X posts
-    var posts = [];
   var POST_PATH = 'source/templates/posts',
-          files = fs.readdirSync(POST_PATH);
+          files = fs.readdirSync(POST_PATH),
+          posts = [];
 
   files.forEach(function(el) {
-    var title = el.replace(/-/g, ' ').replace('.jade', '');
-    var href = '/posts/' + el.replace('.jade', '.html')
-    posts.push({ title: title, href: href });
+    // remove the file extension
+    var el = el.replace('.jade', '');
+    var title = el.replace(/-/g, ' ');
+    posts.push({ title: title, href: '/posts/' + el });
   })
 
 
