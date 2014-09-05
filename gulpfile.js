@@ -1,10 +1,23 @@
 var gulp = require('gulp')
 ,   jade = require('gulp-jade')
+,     fs = require('fs')
 , stylus = require('gulp-stylus')
 , prefix = require('gulp-autoprefixer');
 
 gulp.task('default', function() {
-  var posts = [1,2,3]
+  // get latest X posts
+    var posts = [];
+  var POST_PATH = 'source/templates/posts',
+          files = fs.readdirSync(POST_PATH);
+
+  files.forEach(function(el) {
+    var title = el.replace(/-/g, ' ').replace('.jade', '');
+    var href = '/posts/' + el.replace('.jade', '.html')
+    posts.push({ title: title, href: href });
+  })
+
+
+
 
   gulp.src('source/templates/*.jade')
     .pipe(jade({ pretty: true, locals: {posts: posts} }))

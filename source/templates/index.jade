@@ -6,6 +6,6 @@ block head
 block content
   p carl sednaoui yo la
 
-  for post in posts
+  each post in posts
     li
-      p= post
+      p a(href="#{post['href']}") #{post['title']}
