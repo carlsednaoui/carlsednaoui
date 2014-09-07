@@ -1,15 +1,22 @@
-var gulp = require('gulp')
-,   jade = require('gulp-jade')
-,     fs = require('fs')
-, stylus = require('gulp-stylus')
-, prefix = require('gulp-autoprefixer');
+/**
+imports
+*/
 
-gulp.task('default', function() {
-  // get latest X posts
-  var POST_PATH = 'source/templates/posts',
-          files = fs.readdirSync(POST_PATH),
-          posts = [];
+var gulp = require('gulp');
+var jade = require('gulp-jade');
+var fs = require('fs');
+var stylus = require('gulp-stylus');
+var prefix = require('gulp-autoprefixer');
 
+
+/**
+gulp tasks list
+*/
+
+gulp.task('templates', function(){
+  var POST_PATH = 'source/templates/posts';
+  var files = fs.readdirSync(POST_PATH);
+  var posts = [];
   files.forEach(function(el) {
     // remove the file extension
     var el = el.replace('.jade', '');
@@ -17,30 +24,38 @@ gulp.task('default', function() {
     posts.push({ title: title, href: '/posts/' + el });
   })
 
-  gulp.src('source/templates/*.jade')
+  gulp.src('source/templates/{,posts}/*.jade')
     .pipe(jade({ pretty: true, locals: {posts: posts} }))
     .pipe(gulp.dest('public'));
+});
 
-  gulp.src('source/templates/posts/*.jade')
-    .pipe(jade({ pretty: true, locals: {posts: posts} }))
-    .pipe(gulp.dest('public/posts'));
 
+gulp.task('styles', function() {
   gulp.src('source/styles/*.styl')
     .pipe(stylus({errors: true}))
     .pipe(prefix())
     .pipe(gulp.dest('public/styles'));
-
-  gulp.src('source/scripts/**/*.js')
-    .pipe(gulp.dest('public/scripts'));
-
-  gulp.src('source/images/*')
-    .pipe(gulp.dest('public/images'));
-
 });
 
-// rerun default task whenever a file changes
+
+gulp.task('scripts', function() {
+  gulp.src('source/scripts/**/*.js')
+    .pipe(gulp.dest('public/scripts'));
+});
+
+
+gulp.task('images', function() {
+  gulp.src('source/images/*')
+    .pipe(gulp.dest('public/images'));
+});
+
+
+/**
+gulp tasks used from cli
+*/
+
+gulp.task('default', ['templates', 'styles', 'scripts', 'images']);
+
 gulp.task('watch', function () {
-  gulp.watch('source/templates/**/*.jade', ['default']);
-  gulp.watch('source/styles/*.styl', ['default']);
-  gulp.watch('source/scripts/**/*.js', ['default']);
+  gulp.watch('source/**/*', ['default']);
 });
