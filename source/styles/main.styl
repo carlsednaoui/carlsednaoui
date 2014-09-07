@@ -4,6 +4,7 @@ required files and imports
 
 @require "reset"
 @require "colors"
+@require "utility"
 @require "base"
 
 
@@ -11,7 +12,32 @@ required files and imports
 other styles
 */
 
+h1
+  font-size: 2.4em
+  line-height: 3em
+h2
+  font-size: 1.8em
+  line-height: 2.2em
+h3
+  font-size: 1.4em
+  line-height: 1.8em
+p
+  font-size: 1.1em
+  line-height: 1.5em
+
+.content h1 a,
+.content h2 a,
+.content h3 a,
+.content li a,
+.content p a
+  color: blue
+  text-decoration: none
+  border-bottom: 1px solid blue
+
 .content
   margin: 30px auto 0 auto
   padding: 10px
   max-width: 900px
+
+.about-item
+  margin-top: 20px
