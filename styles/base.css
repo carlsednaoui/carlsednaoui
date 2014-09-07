@@ -18,7 +18,7 @@ header:after {
   display: block;
   padding-top: 20px;
   border-bottom: 1px #808080 solid;
-  max-width: 900px;
+  max-width: 1080px;
   margin: 0 auto;
 }
 header ul {
@@ -35,7 +35,7 @@ header a {
 footer {
   margin: 20px auto 0 auto;
   padding: 20px;
-  max-width: 900px;
+  max-width: 1080px;
   min-height: 100px;
   color: #808080;
 }
@@ -43,6 +43,6 @@ footer:before {
   content: '';
   display: block;
   border-bottom: 1px #808080 solid;
-  max-width: 900px;
+  max-width: 1080px;
   margin: 0 auto 20px 0;
 }
