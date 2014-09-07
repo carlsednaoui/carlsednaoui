@@ -13,8 +13,8 @@ var prefix = require('gulp-autoprefixer');
 gulp tasks list
 */
 
-gulp.task('templates', function(){
-  var POST_PATH = 'source/templates/post';
+gulp.task('content', function(){
+  var POST_PATH = 'source/content/post';
   var files = fs.readdirSync(POST_PATH);
   var posts = [];
   files.forEach(function(el) {
@@ -24,7 +24,7 @@ gulp.task('templates', function(){
     posts.push({ title: title, href: '/post/' + el });
   })
 
-  gulp.src('source/templates/{,post/*}/*.jade')
+  gulp.src('source/content/{,post/*}/*.jade')
     .pipe(jade({ pretty: true, locals: {posts: posts} }))
     .pipe(gulp.dest('public'));
 });
@@ -54,7 +54,7 @@ gulp.task('images', function() {
 gulp tasks used from cli
 */
 
-gulp.task('default', ['templates', 'styles', 'scripts', 'images']);
+gulp.task('default', ['content', 'styles', 'scripts', 'images']);
 
 gulp.task('watch', function () {
   gulp.watch('source/**/*', ['default']);
