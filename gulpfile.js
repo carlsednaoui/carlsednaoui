@@ -14,17 +14,17 @@ gulp tasks list
 */
 
 gulp.task('templates', function(){
-  var POST_PATH = 'source/templates/posts';
+  var POST_PATH = 'source/templates/post';
   var files = fs.readdirSync(POST_PATH);
   var posts = [];
   files.forEach(function(el) {
     // remove the file extension
     var el = el.replace('.jade', '');
     var title = el.replace(/-/g, ' ');
-    posts.push({ title: title, href: '/posts/' + el });
+    posts.push({ title: title, href: '/post/' + el });
   })
 
-  gulp.src('source/templates/{,posts}/*.jade')
+  gulp.src('source/templates/{,post/*}/*.jade')
     .pipe(jade({ pretty: true, locals: {posts: posts} }))
     .pipe(gulp.dest('public'));
 });
