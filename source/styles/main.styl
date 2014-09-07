@@ -12,18 +12,38 @@ required files and imports
 other styles
 */
 
+.container
+  display: flex
+  flex-flow: row wrap
+  max-width: pageWidth
+  padding: 10px
+  margin: 30px auto 0 auto
+
+.content
+  flex: 5 0px
+  
+.sidebar
+  flex: 2 0px
+
+@media all and (max-width: 800px)
+  .content { order: 1; }
+  .content { flex: 1 auto; }
+  .sidebar { flex: 1 auto; }
+  .sidebar { order: 2; }
+
 h1
   font-size: 2.4em
-  line-height: 3em
+  margin-bottom: 30px
 h2
   font-size: 1.8em
-  line-height: 2.2em
+  margin-bottom: 20px
 h3
   font-size: 1.4em
-  line-height: 1.8em
+  margin-bottom: 10px
 p
   font-size: 1.1em
   line-height: 1.5em
+  margin-bottom: 10px
 
 .content h1 a,
 .content h2 a,
@@ -34,10 +54,5 @@ p
   text-decoration: none
   border-bottom: 1px solid blue
 
-.content
-  margin: 30px auto 0 auto
-  padding: 10px
-  max-width: 900px
-
 .about-item
-  margin-top: 20px
+  margin-top: 40px
