@@ -4,8 +4,12 @@ block head
   title foo
 
 block content
-  p carl sednaoui yo la
+  p carl sednaoui!
 
   each post in posts
     li
       a(href="#{post['href']}") #{post['title']}
+
+  .markdown
+    :markdown
+      This is _some_ awesome **markdown**

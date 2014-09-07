@@ -2,9 +2,9 @@
 imports
 */
 
-var gulp = require('gulp');
-var jade = require('gulp-jade');
-var fs = require('fs');
+var fs     = require('fs');
+var gulp   = require('gulp');
+var jade   = require('gulp-jade');
 var stylus = require('gulp-stylus');
 var prefix = require('gulp-autoprefixer');
 
