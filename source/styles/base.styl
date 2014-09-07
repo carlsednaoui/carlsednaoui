@@ -1,0 +1,54 @@
+/**
+include styles for the body, header and footer
+*/
+
+/**
+variables
+*/
+
+pageWidth = 900px
+spacing = 20px
+
+
+/**
+styles
+*/
+
+body
+  font-family: 'Source Sans Pro', sans-serif;
+
+header
+  padding-top: spacing
+
+  &:after
+    content:  ''
+    display:  block
+    padding-top: spacing
+    border-bottom: 1px grey solid
+    max-width: pageWidth
+    margin: 0 auto
+
+  ul
+    text-align: center
+
+  li
+    display: inline-block
+
+  a
+    text-decoration: none
+    margin-right: spacing
+    color: grey
+
+footer
+  margin: spacing auto 0 auto
+  padding: spacing
+  max-width: pageWidth
+  min-height: 100px
+  color: grey
+
+  &:before
+    content:  ''
+    display:  block
+    border-bottom: 1px grey solid
+    max-width: pageWidth
+    margin: 0 auto spacing 0
