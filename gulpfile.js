@@ -17,11 +17,14 @@ gulp.task('content', function(){
   var POST_PATH = 'source/content/post';
   var files = fs.readdirSync(POST_PATH);
   var posts = [];
-  files.forEach(function(el) {
+  files.forEach(function(folder) {
+    // get legacy urls
+    el = fs.readdirSync(POST_PATH + '/' + folder);
+
     // remove the file extension
-    var el = el.replace('.jade', '');
+    var el = el[0].replace('.jade', '');
     var title = el.replace(/-/g, ' ');
-    posts.push({ title: title, href: '/post/' + el });
+    posts.push({ title: title, href: '/post/' + folder + '/' + el });
   })
 
   gulp.src('source/content/{,post/*}/*.jade')
