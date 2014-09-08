@@ -108,6 +108,23 @@ section {
 .u-indentedBullets {
   margin-left: 15px;
 }
+.u-center {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+.u-marginTop {
+  margin-top: 20px;
+}
+.u-marginTopLarge {
+  margin-top: 40px;
+}
+.u-marginTopXl {
+  margin-top: 80px;
+}
+.u-block {
+  display: block;
+}
 body {
   font-family: 'Source Sans Pro', sans-serif;
   color: #444;
@@ -151,10 +168,12 @@ footer:before {
 h1 {
   font-size: 2.4em;
   margin-bottom: 30px;
+  font-weight: 600;
 }
 h2 {
   font-size: 1.8em;
   margin-bottom: 20px;
+  font-weight: 600;
 }
 h3 {
   font-size: 1.4em;
@@ -169,18 +188,17 @@ li {
   font-size: 1.1em;
   line-height: 1.5em;
 }
-.content h1 a,
-.content h2 a,
-.content h3 a,
-.content li a,
-.content p a {
+h1 a,
+h2 a,
+h3 a,
+p a {
   color: #444;
   text-decoration: none;
   border-bottom: 1px solid #bbb;
 }
 blockquote {
-  border-left: 5px solid #444;
-  padding-left: 15px;
+  border-left: 5px solid #888;
+  padding-left: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -204,12 +222,14 @@ img {
   -webkit-flex: 5 0px;
       -ms-flex: 5 0px;
           flex: 5 0px;
+  padding: 0 10px;
 }
 .sidebar {
   -webkit-box-flex: 2;
   -webkit-flex: 2 0px;
       -ms-flex: 2 0px;
           flex: 2 0px;
+  padding: 0 10px;
 }
 @media all and (max-width: 800px) {
   .content {
@@ -242,8 +262,8 @@ img {
 }
 .js-tweetable a {
   color: inherit;
-  text-decoration: none !important;
-  border: none !important;
+  text-decoration: none;
+  border: none;
 }
 .js-tweetable a:after {
   content: '';
@@ -260,4 +280,9 @@ img {
  */
 .about-item {
   margin-top: 40px;
+}
+.content li a {
+  color: #444;
+  text-decoration: none;
+  border-bottom: 1px solid #bbb;
 }

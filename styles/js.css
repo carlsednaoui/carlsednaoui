@@ -6,8 +6,8 @@
 }
 .js-tweetable a {
   color: inherit;
-  text-decoration: none !important;
-  border: none !important;
+  text-decoration: none;
+  border: none;
 }
 .js-tweetable a:after {
   content: '';
