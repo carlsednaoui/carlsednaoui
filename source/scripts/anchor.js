@@ -1,3 +1,8 @@
+/**
+ * append tracking to all external urls
+ * open external urls in a new tab
+ */
+
 $(function() {
 
   var utms = [
@@ -8,17 +13,9 @@ $(function() {
   ].join('&');
 
   $('a').each(function(i, link) {
-    
-    /**
-     * all links should open in a new window
-     */
-    
-    link.target = "_blank";
 
-    
     /**
-     * append tracking to all outbound urls
-     * so long as these don't point to carlsednaoui.com || localhost
+     * make sure anchor doesn't point to carlsednaoui.com || localhost
      */
     
     if (link.href.indexOf('carlsednaoui.com') !== -1 ||
@@ -34,6 +31,11 @@ $(function() {
       link.href += params
     }
 
+    /**
+     * all links should open in a new window
+     */
+    
+    link.target = "_blank";
   });
 
 });
