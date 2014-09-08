@@ -1,6 +1,9 @@
 /**
-utility styles: they should all start with "u-"
-*/
+ utility styles: they should all start with "u-"
+ */
 .u-bold {
   font-weight: 600;
+}
+.u-indentedBullets {
+  margin-left: 15px;
 }

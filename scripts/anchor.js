@@ -1,9 +1,5 @@
-console.log('test.js');
-
 $(function() {
-  // 
-  // append tracking to all outbound urls
-  // 
+
   var utms = [
     'utm_campaign=carlsednaoui',
     'utm_source=carlsednaoui',
@@ -12,9 +8,19 @@ $(function() {
   ].join('&');
 
   $('a').each(function(i, link) {
-    // all links should open in a new window
+    
+    /**
+     * all links should open in a new window
+     */
+    
     link.target = "_blank";
 
+    
+    /**
+     * append tracking to all outbound urls
+     * so long as these don't point to carlsednaoui.com || localhost
+     */
+    
     if (link.href.indexOf('carlsednaoui.com') !== -1 ||
         link.href.indexOf('localhost') !== -1) {
       return;
@@ -27,5 +33,7 @@ $(function() {
       var params = '&' + utms;
       link.href += params
     }
+
   });
+
 });

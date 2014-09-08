@@ -1,6 +1,6 @@
 /**
-required files and imports
-*/
+ required files and imports
+ */
 html,
 body,
 div,
@@ -105,8 +105,12 @@ section {
 .u-bold {
   font-weight: 600;
 }
+.u-indentedBullets {
+  margin-left: 15px;
+}
 body {
   font-family: 'Source Sans Pro', sans-serif;
+  color: #444;
 }
 header {
   padding-top: 20px;
@@ -135,7 +139,7 @@ footer {
   padding: 20px;
   max-width: 1080px;
   min-height: 100px;
-  color: #888;
+  color: #444;
 }
 footer:before {
   content: '';
@@ -144,9 +148,36 @@ footer:before {
   max-width: 1080px;
   margin: 0 auto 20px 0;
 }
-/**
-other styles
-*/
+h1 {
+  font-size: 2.4em;
+  margin-bottom: 30px;
+}
+h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+h3 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+p {
+  font-size: 1.1em;
+  line-height: 1.5em;
+  margin-bottom: 10px;
+}
+li {
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+.content h1 a,
+.content h2 a,
+.content h3 a,
+.content li a,
+.content p a {
+  color: #444;
+  text-decoration: none;
+  border-bottom: 1px solid #bbb;
+}
 .container {
   display: -webkit-box;
   display: -webkit-flex;
@@ -197,32 +228,9 @@ other styles
             order: 2;
   }
 }
-h1 {
-  font-size: 2.4em;
-  margin-bottom: 30px;
-}
-h2 {
-  font-size: 1.8em;
-  margin-bottom: 20px;
-}
-h3 {
-  font-size: 1.4em;
-  margin-bottom: 10px;
-}
-p {
-  font-size: 1.1em;
-  line-height: 1.5em;
-  margin-bottom: 10px;
-}
-.content h1 a,
-.content h2 a,
-.content h3 a,
-.content li a,
-.content p a {
-  color: #2a94d6;
-  text-decoration: none;
-  border-bottom: 1px solid #2a94d6;
-}
+/**
+ other styles
+ */
 .about-item {
   margin-top: 40px;
 }

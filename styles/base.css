@@ -1,14 +1,12 @@
 /**
-include styles for the body, header and footer
-*/
+ * variables
+ */
 /**
-variables
-*/
-/**
-styles
-*/
+ body, header and footer
+ */
 body {
   font-family: 'Source Sans Pro', sans-serif;
+  color: greyDark;
 }
 header {
   padding-top: 20px;
@@ -37,7 +35,7 @@ footer {
   padding: 20px;
   max-width: 1080px;
   min-height: 100px;
-  color: #808080;
+  color: greyDark;
 }
 footer:before {
   content: '';
@@ -45,4 +43,37 @@ footer:before {
   border-bottom: 1px #808080 solid;
   max-width: 1080px;
   margin: 0 auto 20px 0;
+}
+/**
+ other styles
+ */
+h1 {
+  font-size: 2.4em;
+  margin-bottom: 30px;
+}
+h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+h3 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+p {
+  font-size: 1.1em;
+  line-height: 1.5em;
+  margin-bottom: 10px;
+}
+li {
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+.content h1 a,
+.content h2 a,
+.content h3 a,
+.content li a,
+.content p a {
+  color: greyDark;
+  text-decoration: none;
+  border-bottom: 1px solid greyLight;
 }
