@@ -1,0 +1,22 @@
+/**
+ template layouts
+ */
+
+.container
+  display: flex
+  flex-flow: row wrap
+  max-width: pageWidth
+  padding: 10px
+  margin: 30px auto 0 auto
+
+.content
+  flex: 5 0px
+  
+.sidebar
+  flex: 2 0px
+
+@media all and (max-width: 800px)
+  .content { order: 1; }
+  .content { flex: 1 auto; }
+  .sidebar { flex: 1 auto; }
+  .sidebar { order: 2; }
