@@ -1,53 +1,55 @@
 extends ../../../templates/post
 
 block content
-  h1 The Best To-Do List: A Private Gist
-  p I’m a HUGE fan of todo lists. They help me stay organized, prioritize my day and add structure to an otherwise chaotic day. 
+  .markdown
+    :markdown
+      # The Best To-Do List: A Private Gist
+      
+      I’m a HUGE fan of todo lists. They help me stay organized, prioritize my day and add structure to an otherwise chaotic day. 
 
-  p I recently discovered what appears to be the <strong>best </strong>yet<strong> simplest </strong>way to keep a todo list: <a href="http://gist.github.com">a GitHub Gist</a>.
+      I recently discovered what appears to be the **best **yet** simplest **way to keep a todo list: [a GitHub Gist](http://gist.github.com).
 
-  p <strong>Edit:</strong> As mentioned in the <a href="https://news.ycombinator.com/item?id=7000953">comments on HackerNews</a>, this is the <strong>best</strong> to-do list for <strong>me</strong> based on my workflow (I use this on a daily basis at <a href="http://www.thinkful.com/welcome?utm_campaign=tf_carlsednaoui&amp;utm_source=gh-todo&amp;utm_medium=tf_cs_blog">Thinkful</a>). Depending on your workflow, other to-do lists might make more sense (here are some <a href="https://news.ycombinator.com/item?id=7000953">recommendations from HN</a> and some <a href="http://lifehacker.com/why-a-github-gist-is-my-favorite-to-do-list-1493063613">from LifeHacker</a>).
+      **Edit:** As mentioned in the [comments on HackerNews](https://news.ycombinator.com/item?id=7000953), this is the **best** to-do list for **me** based on my workflow (I use this on a daily basis at [Thinkful](http://www.thinkful.com)). Depending on your workflow, other to-do lists might make more sense (here are some [recommendations from HN](https://news.ycombinator.com/item?id=7000953) and some [from LifeHacker](http://lifehacker.com/why-a-github-gist-is-my-favorite-to-do-list-1493063613)).
 
-  p Allow me to elaborate: GitHub has this thing called “GitHub Flavored Markdown” which allows you to write <a href="https://github.com/blog/1375-task-lists-in-gfm-issues-pulls-comments">task lists</a>.
+      Allow me to elaborate: GitHub has this thing called “GitHub Flavored Markdown” which allows you to write [task lists](https://github.com/blog/1375-task-lists-in-gfm-issues-pulls-comments).
 
-  p Go to <a href="https://gist.github.com/">gist.github.com</a>, create a new Markdown file (ending your filename with .md will auto-set it to Markdown). Enter some Markdown and create a Secret Gist (secret ‘cause you don’t want others peeking on your todos).
+      Go to [gist.github.com](https://gist.github.com/), create a new Markdown file (ending your filename with .md will auto-set it to Markdown). Enter some Markdown and create a Secret Gist (secret ‘cause you don’t want others peeking on your todos).
 
-  p <img alt="image" src="http://media.tumblr.com/779fb597ea1e5ad5d7bc9cc3dfd88fc9/tumblr_inline_mxym2ixJ0u1r21sx6.png">
+      ![](/images/posts/todo-gist-1.png)
 
+      Notice how the above example includes [task lists](https://github.com/blog/1375-task-lists-in-gfm-issues-pulls-comments) which, when saved, transforms into checkboxes.
 
-  p Notice how the above example includes <a href="https://github.com/blog/1375-task-lists-in-gfm-issues-pulls-comments">task lists</a> which, when saved, transforms into checkboxes.
+      The notation is:
 
-  p The notation is:
+        - `- [ ]` for an empty checkbox
+        - `- [x]` for a checked checkbox
+        - **Note**: As mentioned by Ben in the comments “you need a space between the dash and open bracket and, for unchecked items, a space between the open and closing brackets.”
+    
+      It’s like magic, but real.
 
-  <ul><li>- [ ] for an empty checkbox</li>
-  <li>- [x] for a checked checkbox</li>
-  <li><strong>Note</strong>: As mentioned by Ben in the comments “you need a space between the dash and open bracket and, for unchecked items, a space between the open and closing brackets.”</li>
-  </ul>p It’s like magic, but real.
-
-  p <img alt="image" src="http://media.tumblr.com/e2b1beddb5f2f3c10717c33ef52d8574/tumblr_inline_mxym7oezet1r21sx6.png">
-
-
-  p Whenever you complete a task simply check it off (all changes are automatically saved):
-
-  p <img alt="image" src="http://media.tumblr.com/ae60c8012ec99f95f3e0ef992f95f663/tumblr_inline_mxym9qq70Z1r21sx6.png">
-
-  p At the end of my workday I click “Edit” to delete all tasks completed and move tomorrow’s tasks up:
-
-  p <img alt="image" src="http://media.tumblr.com/e15165cc1ced95b750f12e1404ad48c8/tumblr_inline_mxymbvQJua1r21sx6.png">
-
-  p <img alt="image" src="http://media.tumblr.com/e13baeb3a0ed2fe677994f9f92d43ff1/tumblr_inline_mxymcmDWPe1r21sx6.png">
+      ![](/images/posts/todo-gist-2.png)
 
 
-  p Save the file (shortcut: cmd + enter) and voila!
+      Whenever you complete a task simply check it off (all changes are automatically saved):
 
-  p <img alt="image" src="http://media.tumblr.com/bd35cee4c8fb8d3b6e1a20b635c7e4c7/tumblr_inline_mxyme2nxol1r21sx6.png">
+      ![](/images/posts/todo-gist-3.png)
 
-  p Wait, but what if I want to know <em>when</em> I completed something? Easy, this is GitHub! Simply go to the revisions tab, your entire file change history is available there:
+      At the end of my workday I click “Edit” to delete all tasks completed and move tomorrow’s tasks up:
 
-  p <img alt="image" src="http://media.tumblr.com/c8cb34ed9ba13a38c3128253356c3c06/tumblr_inline_mxymf70qiQ1r21sx6.png">
+      ![](/images/posts/todo-gist-4.png)
+
+      ![](/images/posts/todo-gist-5.png)
+
+      Save the file (shortcut: cmd + enter) and voila!
+
+      ![](/images/posts/todo-gist-6.png)
+
+      Wait, but what if I want to know <em>when</em> I completed something? Easy, this is GitHub! Simply go to the revisions tab, your entire file change history is available there:
+
+      ![](/images/posts/todo-gist-7.png)
 
 
-  p Find the sample todo list <a href="https://gist.github.com/carlsednaoui/531c4f655735d3317bab">here</a>. Let me know if you found this useful and happy holidays! :)
+      Find the sample todo list [here](https://gist.github.com/carlsednaoui/531c4f655735d3317bab). Let me know if you found this useful and happy holidays! :)
 
 
-  p P.S.: I often tweet about Marketing, Engineering and Startups. You should <a href="https://twitter.com/carlsednaoui">follow me here</a>.
+      P.S.: I often tweet about Marketing, Engineering and Startups. You should [follow me here](https://twitter.com/carlsednaoui).

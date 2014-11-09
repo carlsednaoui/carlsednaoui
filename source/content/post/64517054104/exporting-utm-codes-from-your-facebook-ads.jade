@@ -1,81 +1,82 @@
 extends ../../../templates/post
 
 block content
-  h1 Exporting UTM Codes From Your Facebook Ads
+  .markdown
+    :markdown
+      # Exporting UTM Codes From Your Facebook Ads
 
-  p We, online marketers, love to track everything in our campaigns. Here’s another way to look at it:
+      We, online marketers, love to track everything in our campaigns. Here’s another way to look at it:
 
-  p <img src="http://media.tumblr.com/cb2ae81feb029a5d84a568cc607edadc/tumblr_inline_muxpgm0Sr11r21sx6.png">
-
-
-  p This posts assumes you’re familiar with&nbsp;<a href="https://support.google.com/analytics/answer/1033867?hl=en" title="UTM Builder">UTMs</a>,&nbsp;that you use Facebook ads, that you know how to use Excel vlookup AND that you want to track your Facebook ad performance by UTM.
-
-  p <strong>Side note:</strong> I’m the Marketing Engineer at&nbsp;<a href="http://www.thinkful.com/?utm_campaign=carl_blog&amp;utm_source=carlsednaoui&amp;utm_medium=blog_post">Thinkful</a>&nbsp;(we help you learn to code through mentorship and real coding projects) and I use this technique to tie Facebook ads to lead, engagement and student conversions with our CRM. The way I match everything is via UTMs. This is REALLY important since it enables me to determine the ROI of every campaign, audience and ad.
+      ![](/images/posts/fb-utm-1.png)
 
 
-  p <strong>Ready? Let’s dive in!</strong>
+      This posts assumes you’re familiar with [UTMs](https://support.google.com/analytics/answer/1033867?hl=en), that you use Facebook ads, that you know how to use Excel vlookup AND that you want to track your Facebook ad performance by UTM.
 
-  p 1) Got to your Facebook ad dashboard and click edit columns:
-
-  p <img src="http://media.tumblr.com/dbde7a39be268be23793525579b3955e/tumblr_inline_muxpwomP0a1r21sx6.png">
-
-  p 2) Select the “Ad ID” field and click “Save Columns”:
-
-  p <img src="http://media.tumblr.com/a8ce84151969319c009079c5ce90ce96/tumblr_inline_muxq07rJaQ1r21sx6.png">
+      **Side note:** I’m the Marketing Engineer at [Thinkful](http://www.thinkful.com) (we help you learn to code through mentorship and real coding projects) and I use this technique to tie Facebook ads to lead, engagement and student conversions with our CRM. The way I match everything is via UTMs. This is REALLY important since it enables me to determine the ROI of every campaign, audience and ad.
 
 
-  p You’ll now see an extra column labeled “Ad ID” (the 4th column in my example below). You can now select the time-range you want to analyze. In our example we’re looking at the last 7 days:
+      **Ready? Let’s dive in!**
 
-  p <img src="http://media.tumblr.com/e4d5fc712e51cc0c1015f70436e9df58/tumblr_inline_muxq3bta0Y1r21sx6.png">
+      1) Got to your Facebook ad dashboard and click edit columns:
 
+      ![](/images/posts/fb-utm-2.png)
 
-  p 3) You’ll now want to export this to Excel by clicking on the blue “Export” button.
+      2) Select the “Ad ID” field and click “Save Columns”:
 
-
-  p 4) Next stop: <a href="https://www.facebook.com/help/194355723944655/">Facebook Power Editor</a>. Open Power Editor and&nbsp;click on “Options” &gt; “Settings” &gt; “More Settings” and enable the “Keep Deleted Campaigns/Ads” option. Click “Save”. This enables us to get info for ads you may have deleted.
-
-  p <img src="http://media.tumblr.com/c6ccaa5edfa7362ce4cf7c53dcf3477e/tumblr_inline_muxr52i0dT1r21sx6.png">
+      ![](/images/posts/fb-utm-3.png)
 
 
-  p <img src="http://media.tumblr.com/5098863520d93883bce2fa94a32b127c/tumblr_inline_muxr5q7lB71r21sx6.png">
+      You’ll now see an extra column labeled “Ad ID” (the 4th column in my example below). You can now select the time-range you want to analyze. In our example we’re looking at the last 7 days:
+
+      ![](/images/posts/fb-utm-4.png)
 
 
-  p 5) You’ll now need to download your latest campaign data. Do so by clicking on the big “Download” button on the top-right. Once your data is done downloading (this can take a minute)&nbsp;select the “Ads” tab up top:
-
-  p <img src="http://media.tumblr.com/07eee967634afc5dab8ee953a643ffde/tumblr_inline_muxqg4QgIZ1r21sx6.png">
-
-  p 6) Click on your 1st ad (it should become highlighted in blue), then press cmd + a to select all your ads (they should ALL be highlighted in blue now). Press cmd + c to copy them to your clipboard.
-
-  p 7) Open the Excel file you downloaded in Step #3 and create a new tab.
-
-  p 8) Paste this data in the new tab.
-
-  p <img src="http://media.tumblr.com/641e0ffa6ee1da76ce1f1fa804310150/tumblr_inline_muxqud1BOx1r21sx6.png">
+      3) You’ll now want to export this to Excel by clicking on the blue “Export” button.
 
 
-  p Look at Column A… You see where we’re going with this, don’t you? Column A contains the Ad ID you need to tie this to your previous export (from Step #3). Now look at Column S (with the header “Link”). Oh snap, I smell some UTM awesomeness!
+      4) Next stop: [Facebook Power Editor](https://www.facebook.com/help/194355723944655/). Open Power Editor and click on “Options” &gt; “Settings” &gt; “More Settings” and enable the “Keep Deleted Campaigns/Ads” option. Click “Save”. This enables us to get info for ads you may have deleted.
 
-  p <strong>Side note:</strong>&nbsp;You may be wondering “why don’t we just look at THIS data (from Step #8) and call it a day?” From my experience, the spend, impression and click data from Step #8 is NOT always accurate. Another reason is that on the web interface you can ad conversions and other metrics (just follow the steps we used to add the “Ad ID” in Step #2 but select any other metric you want to analyze). Ready to keep going?
+      ![](/images/posts/fb-utm-5.png)
 
-  p 9) Select Column A and do a <a href="http://office.microsoft.com/en-us/excel-help/find-or-replace-text-and-numbers-on-a-worksheet-HP001216390.aspx" title="Find and Replace in Excel">Find and Replace</a>.
-
-  p In the “Find what:” type “a:”
-
-  p Leave the “Replace with:” blank and click “Replace All”. This will essentially remove all the “a:” from Column A.
-
-  p 10) Now go back to “Sheet 1” (which contains the data from the Facebook web export from Step #3) and create a new Column at the end called URL.
-
-  p 11) Time for some <a href="http://office.microsoft.com/en-us/excel-help/vlookup-HP005209335.aspx" title="Vlookups">vlookups</a>! You’ll want to lookup the Ad ID (Column D in Sheet 1 of this example) and match it with Column A in Sheet 2. You’ll want to return the “Link” field (which is Columns S for me).
-
-  p Here’s what my vlookup looks like in Sheet 1, cell S2: =VLOOKUP(D2,Sheet2!A:S,19)
-
-  p 12) Drag your formula all the way down. Boom! You now have URL details at the ad level.
-
-  p 13) You can now use <a href="http://office.microsoft.com/en-us/excel-help/split-names-by-using-the-convert-text-to-columns-wizard-HA010102340.aspx" title="Text to columns">text-to-columns</a>&nbsp;to split your URL by “?” or “&amp;” and get UTM info.
-
-  p 14) Throw all this in a <a href="http://office.microsoft.com/en-us/excel-help/pivottable-reports-101-HA001034632.aspx" title="Pivot Tables">Pivot Table</a>.
-
-  p 15) Find incredible insights, optimize your campaigns, and destroy your competition :)
+      ![](/images/posts/fb-utm-6.png)
 
 
-  p <strong>P.S.:</strong> If you’re interested in more blog posts like this, you should <a href="https://twitter.com/CarlSednaoui" title="Follow Carl Sednaoui">follow me on Twitter</a>.
+      5) You’ll now need to download your latest campaign data. Do so by clicking on the big “Download” button on the top-right. Once your data is done downloading (this can take a minute) select the “Ads” tab up top:
+
+      ![](/images/posts/fb-utm-7.png)
+
+      6) Click on your 1st ad (it should become highlighted in blue), then press cmd + a to select all your ads (they should ALL be highlighted in blue now). Press cmd + c to copy them to your clipboard.
+
+      7) Open the Excel file you downloaded in Step #3 and create a new tab.
+
+      8) Paste this data in the new tab.
+
+      ![](/images/posts/fb-utm-8.png)
+
+
+      Look at Column A… You see where we’re going with this, don’t you? Column A contains the Ad ID you need to tie this to your previous export (from Step #3). Now look at Column S (with the header “Link”). Oh snap, I smell some UTM awesomeness!
+
+      **Side note:** You may be wondering “why don’t we just look at THIS data (from Step #8) and call it a day?” From my experience, the spend, impression and click data from Step #8 is NOT always accurate. Another reason is that on the web interface you can ad conversions and other metrics (just follow the steps we used to add the “Ad ID” in Step #2 but select any other metric you want to analyze). Ready to keep going?
+
+      9) Select Column A and do a [Find and Replace](http://office.microsoft.com/en-us/excel-help/find-or-replace-text-and-numbers-on-a-worksheet-HP001216390.aspx).
+
+      In the “Find what:” type “a:”
+
+      Leave the “Replace with:” blank and click “Replace All”. This will essentially remove all the “a:” from Column A.
+
+      10) Now go back to “Sheet 1” (which contains the data from the Facebook web export from Step #3) and create a new Column at the end called URL.
+
+      11) Time for some [vlookups](http://office.microsoft.com/en-us/excel-help/vlookup-HP005209335.aspx)! You’ll want to lookup the Ad ID (Column D in Sheet 1 of this example) and match it with Column A in Sheet 2. You’ll want to return the “Link” field (which is Columns S for me).
+
+      Here’s what my vlookup looks like in Sheet 1, cell S2: =VLOOKUP(D2,Sheet2!A:S,19)
+
+      12) Drag your formula all the way down. Boom! You now have URL details at the ad level.
+
+      13) You can now use [text-to-columns](http://office.microsoft.com/en-us/excel-help/split-names-by-using-the-convert-text-to-columns-wizard-HA010102340.aspx) to split your URL by “?” or “&amp;” and get UTM info.
+
+      14) Throw all this in a [Pivot Table](http://office.microsoft.com/en-us/excel-help/pivottable-reports-101-HA001034632.aspx).
+
+      15) Find incredible insights, optimize your campaigns, and destroy your competition :)
+
+
+      **P.S.:** If you’re interested in more blog posts like this, you should [follow me on Twitter](https://twitter.com/CarlSednaoui).
