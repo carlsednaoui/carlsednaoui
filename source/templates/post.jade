@@ -4,11 +4,10 @@ html(lang="en")
   body
     include partials/_header.jade
     
-    .container
-      .content
-        block content
-    
-      .sidebar
-        include partials/_sidebar.jade
+    .blog-post
+      block content
+  
+    .promo
+      include partials/_sidebar.jade
 
     include partials/_footer.jade
