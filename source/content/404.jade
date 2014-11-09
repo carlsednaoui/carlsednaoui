@@ -1,9 +1,12 @@
-doctype html
-html(lang="en")
-  head
-    link(rel="stylesheet", href="styles/main.css")
-    link(href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900", rel="stylesheet", type="text/css")
-    script(src="scripts/lib/jquery.min.js")
-    script(src="scripts/test.js")
-  body
-    p THIS IS A 404
+extends ../templates/homepage
+
+block head
+  title Houston we've got a 404
+  meta(name="description" content="Ahhhh, help! This is a 404 page. Google, why are you indexing this!?")
+
+block content
+  h1 Captain, we've got a 404.
+  h2 Ahhhhh, abandon ship!
+  p Or go back to the 
+    a(href="/") homepage
+    |.
