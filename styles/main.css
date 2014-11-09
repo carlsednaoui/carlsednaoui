@@ -263,8 +263,11 @@ img {
   text-decoration: none;
   border-bottom: 1px solid #bbb;
 }
-.blog-post li p {
+.blog-post li * {
   font-size: 1em;
+}
+.blog-post img {
+  max-width: 100%;
 }
 @media all and (max-width: 800px) {
   .blog-post p {
