@@ -35,10 +35,3 @@ Both branches have the same `.gitignore` which includes:
 ### Jade documentation
 - [http://naltatis.github.io/jade-syntax-docs/](http://naltatis.github.io/jade-syntax-docs/)
 - [http://jade-lang.com/reference/includes/](http://jade-lang.com/reference/includes/)
-
-### TODO
-- Import all images from Tumblr into my personal S3 bucket
-- Create list of posts to feature on homepage
-- Migrate disqus
-- Should the blog post be "justify"
-- 
