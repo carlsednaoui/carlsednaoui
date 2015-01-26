@@ -1,7 +1,9 @@
 extends ../../../templates/post
 
 block head
-  title Say hi to Mooshie! The new site is finally ready :)
+  - var title = "Say hi to Mooshie! The new site is finally ready :)"
+  - var description = "This is mooshie, your friendly robot."
+  - var url = "/post/27803255922/say-hi-to-mooshie-the-new-site-is-finally-going"
 
 block content
   .markdown

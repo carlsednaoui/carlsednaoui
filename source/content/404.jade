@@ -1,8 +1,9 @@
 extends ../templates/homepage
 
 block head
-  title Houston we've got a 404
-  meta(name="description" content="Ahhhh, help! This is a 404 page. Google, why are you indexing this!?")
+  - var title = "Houston we've got a 404"
+  - var description = "Ahhhh, help! This is a 404 page. Google, why are you indexing this!?"
+  - var url = "/404"
 
 block content
   h1 Captain, we've got a 404.

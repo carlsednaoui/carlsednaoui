@@ -7,6 +7,8 @@ var gulp   = require('gulp');
 var jade   = require('gulp-jade');
 var stylus = require('gulp-stylus');
 var prefix = require('gulp-autoprefixer');
+var config = require('npm-config');
+var ENV = process.env.NODE_ENV || 'development';
 
 
 /**
@@ -27,8 +29,15 @@ gulp.task('content', function(){
     posts.push({ title: title, href: '/post/' + folder + '/' + el });
   })
 
+  // reverse chronological order
+  posts.reverse();
+
+  var locals = {};
+  locals.posts = posts;
+  locals.googleAnalyticsKey = config(ENV, 'googleAnalyticsKey');
+
   gulp.src('source/content/{,post/*}/*.jade')
-    .pipe(jade({ pretty: true, locals: {posts: posts} }))
+    .pipe(jade({ pretty: true, locals: locals }))
     .pipe(gulp.dest('public'));
 });
 

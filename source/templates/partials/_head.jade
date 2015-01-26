@@ -1,7 +1,52 @@
 head
+  meta(charset="utf8")
+  meta(name="viewport" content="width=device-width, initial-scale=1")
+  link(rel="shortcut icon" href="/images/favicon.ico")
+
   link(rel="stylesheet", href="/styles/main.css")
-  link(href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900", rel="stylesheet", type="text/css")
   script(src="/scripts/lib/jquery.min.js")
   script(src="/scripts/anchor.js")
   script(src="/scripts/tweetable.js")
+
+  //- env vars
+  script.
+    var ENV_VARS = {
+      googleAnalyticsKey: "#{googleAnalyticsKey}"
+    };
+
+  //- load GA after ENV_VARS have been defined
+  script.
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', ENV_VARS.googleAnalyticsKey, 'auto');
+    ga('send', 'pageview');
+
+
+  //- load pretty fonts
+  script(src="//use.typekit.net/sfq0ozp.js")
+  script.
+    try{Typekit.load();}catch(e){}
+
+  //- head yield tag needs to come before head variables are used
+  //- e.g. title, description
   block head
+
+  title #{title}
+  meta(name="description",        content="#{description}")
+  
+  //- facebook og tags
+  meta(property="og:title"        content="#{title}")
+  meta(property="og:url"          content="http://carlsednaoui.com" + url)
+  meta(property="og:description"  content="#{description}")
+  meta(property="og:type"         content="article")
+  meta(property="og:site_name"    content="CarlSednaoui.com")
+
+  //- twitter card tags
+  meta(name="twitter:card"        content="summary")
+  meta(name="twitter:site"        content="@CarlSednaoui")
+  meta(name="twitter:url"         content="http://carlsednaoui.com" + url)
+  meta(name="twitter:title"       content="#{title}")
+  meta(name="twitter:description" content="#{description}")

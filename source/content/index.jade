@@ -1,8 +1,9 @@
 extends ../templates/homepage
 
 block head
-  title Carl Sednaoui
-  meta(name="description" content="Discover Carl Sednaoui's latest blog posts and projects right here.")
+  - var title = "Carl Sednaoui"
+  - var description = "Discover Carl Sednaoui's latest blog posts and projects right here."
+  - var url = "/"
 
 block content
   p Carl Sednaoui

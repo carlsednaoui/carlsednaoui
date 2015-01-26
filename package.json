@@ -3,9 +3,20 @@
   "version": "0.0.0",
   "description": "Carl Sednaoui's personal site",
   "main": "index.js",
+  "config": {
+    "development": {
+      "port": 3000,
+      "googleAnalyticsKey": "UA-23209172-10"
+    },
+    "production": {
+      "port": 80,
+      "googleAnalyticsKey": "UA-23209172-1"
+    }
+  },
   "scripts": {
     "start": "node index.js",
-    "deploy": "gulp && git checkout gh-pages && cp -r public/* ./ && git add . && git commit -am 'Deploy' && git push origin gh-pages && git checkout master"
+    "deploy": "NODE_ENV=production gulp && git checkout gh-pages && cp -r public/* ./ && git add . && git commit -am 'Deploy' && git push origin gh-pages && git checkout master",
+    "watch": "NODE_ENV=development gulp watch"
   },
   "repository": {
     "type": "git",
@@ -22,6 +33,9 @@
     "gulp-autoprefixer": "0.0.10",
     "gulp-jade": "^0.7.0",
     "gulp-stylus": "^1.3.0",
+    "npm-config": "^0.2.0",
+    "serve-favicon": "^2.0.0",
+    "marked": "^0.3.2",
     "express": "^4.8.7"
   }
 }
