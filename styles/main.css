@@ -131,17 +131,23 @@ body {
 }
 header {
   padding-top: 20px;
-}
-header:after {
-  content: '';
-  display: block;
-  padding-top: 20px;
-  border-bottom: 1px #888 solid;
-  max-width: 1080px;
   margin: 0 auto;
-}
-header ul {
   text-align: center;
+}
+header .name h1 {
+  display: inline-block;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+header .name:after {
+  content: "";
+  background-image: url("/images/croissant.svg");
+  background-repeat: no-repeat;
+  background-size: 25px;
+  display: inline-block;
+  width: 25px;
+  height: 54px;
+  margin-left: -17px;
 }
 header li {
   display: inline-block;
@@ -206,7 +212,6 @@ img {
   border-radius: 3px;
 }
 .container {
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -218,14 +223,12 @@ img {
   margin: 30px auto 0 auto;
 }
 .content {
-  -webkit-box-flex: 5;
   -webkit-flex: 5 0px;
       -ms-flex: 5 0px;
           flex: 5 0px;
   padding: 0 10px;
 }
 .sidebar {
-  -webkit-box-flex: 2;
   -webkit-flex: 2 0px;
       -ms-flex: 2 0px;
           flex: 2 0px;

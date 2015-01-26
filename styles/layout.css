@@ -2,7 +2,6 @@
  template layouts
  */
 .container {
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -14,14 +13,12 @@
   margin: 30px auto 0 auto;
 }
 .content {
-  -webkit-box-flex: 5;
   -webkit-flex: 5 0px;
       -ms-flex: 5 0px;
           flex: 5 0px;
   padding: 0 10px;
 }
 .sidebar {
-  -webkit-box-flex: 2;
   -webkit-flex: 2 0px;
       -ms-flex: 2 0px;
           flex: 2 0px;
