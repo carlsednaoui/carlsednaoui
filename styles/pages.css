@@ -1,0 +1,7 @@
+.about {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.about .about-item {
+  margin-top: 40px;
+}

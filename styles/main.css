@@ -234,6 +234,13 @@ img {
           flex: 2 0px;
   padding: 0 10px;
 }
+.about {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.about .about-item {
+  margin-top: 40px;
+}
 .blog-post {
   max-width: 600px;
   margin: 0 auto;
@@ -298,9 +305,6 @@ img {
 /**
  other styles
  */
-.about-item {
-  margin-top: 40px;
-}
 .content li a {
   color: #444;
   text-decoration: none;
