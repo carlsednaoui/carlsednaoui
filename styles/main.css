@@ -126,7 +126,7 @@ section {
   display: block;
 }
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', 'Helvetica', sans-serif;
   color: #444;
 }
 header {
@@ -136,6 +136,9 @@ header {
 }
 header .name h1 {
   display: inline-block;
+  font-family: 'Raleway', 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-weight: 200;
+  font-size: 1.8em;
   text-transform: uppercase;
   margin-bottom: 0;
 }
@@ -143,11 +146,11 @@ header .name:after {
   content: "";
   background-image: url("/images/croissant.svg");
   background-repeat: no-repeat;
-  background-size: 25px;
+  background-size: 20px;
   display: inline-block;
-  width: 25px;
-  height: 54px;
-  margin-left: -17px;
+  width: 20px;
+  height: 48px;
+  margin-left: -15px;
 }
 header li {
   display: inline-block;
@@ -156,39 +159,29 @@ header a {
   text-decoration: none;
   margin-right: 20px;
   color: #888;
-}
-footer {
-  margin: 20px auto 0 auto;
-  padding: 20px;
-  max-width: 1080px;
-  min-height: 100px;
-  color: #444;
-}
-footer:before {
-  content: '';
-  display: block;
-  border-bottom: 1px #888 solid;
-  max-width: 1080px;
-  margin: 0 auto 20px 0;
+  font-weight: 200;
 }
 h1 {
   font-size: 2.4em;
-  margin-bottom: 30px;
+  padding-top: 20px;
+  margin-bottom: 50px;
   font-weight: 600;
 }
 h2 {
   font-size: 1.8em;
-  margin-bottom: 20px;
+  padding-top: 20px;
+  margin-bottom: 40px;
   font-weight: 600;
 }
 h3 {
   font-size: 1.4em;
-  margin-bottom: 10px;
+  padding-top: 20px;
+  margin-bottom: 30px;
 }
 p {
-  font-size: 1.1em;
-  line-height: 1.5em;
-  margin-bottom: 10px;
+  font-size: 1.15em;
+  line-height: 1.8em;
+  margin-bottom: 20px;
 }
 li {
   font-size: 1.1em;
@@ -234,28 +227,28 @@ img {
           flex: 2 0px;
   padding: 0 10px;
 }
-.homepage {
-  min-height: 500px;
+.homepage .quote {
+  padding-top: 10%;
+}
+.homepage h1,
+.homepage h2 {
+  font-family: 'Raleway', 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-weight: 200;
+  text-transform: lowercase;
+  text-align: center;
+  color: #888;
 }
 .homepage h1 {
   font-size: 1.5em;
-  text-transform: lowercase;
-  text-align: center;
   -webkit-animation: fadeinfromtop 3s;
           animation: fadeinfromtop 3s;
-  color: #888;
+  margin-bottom: 30px;
 }
 .homepage h2 {
   font-size: 1.2em;
-  text-transform: lowercase;
-  text-align: center;
   -webkit-animation: fadeinfrombottom 6s;
           animation: fadeinfrombottom 6s;
   opacity: 1;
-  color: #888;
-}
-.homepage .quote {
-  padding-top: 13%;
 }
 @-webkit-keyframes fadeinfromtop {
   0% {
@@ -311,6 +304,9 @@ img {
 }
 .about .about-item {
   margin-top: 40px;
+}
+.about img {
+  width: 100%;
 }
 .blog-post {
   max-width: 600px;

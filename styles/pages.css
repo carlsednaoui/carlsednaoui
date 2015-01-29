@@ -1,25 +1,25 @@
-.homepage {
-  min-height: 500px;
+.homepage .quote {
+  padding-top: 10%;
+}
+.homepage h1,
+.homepage h2 {
+  font-family: font-raleway;
+  font-weight: 200;
+  text-transform: lowercase;
+  text-align: center;
+  color: #888;
 }
 .homepage h1 {
   font-size: 1.5em;
-  text-transform: lowercase;
-  text-align: center;
   -webkit-animation: fadeinfromtop 3s;
           animation: fadeinfromtop 3s;
-  color: #888;
+  margin-bottom: 30px;
 }
 .homepage h2 {
   font-size: 1.2em;
-  text-transform: lowercase;
-  text-align: center;
   -webkit-animation: fadeinfrombottom 6s;
           animation: fadeinfrombottom 6s;
   opacity: 1;
-  color: #888;
-}
-.homepage .quote {
-  padding-top: 13%;
 }
 @-webkit-keyframes fadeinfromtop {
   0% {
@@ -75,4 +75,7 @@
 }
 .about .about-item {
   margin-top: 40px;
+}
+.about img {
+  width: 100%;
 }
