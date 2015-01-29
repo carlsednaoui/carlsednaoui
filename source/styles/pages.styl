@@ -1,20 +1,24 @@
 .homepage
-  min-height: 500px
+  .quote
+    padding-top: 10%
+  
+  h1,
+  h2
+    font-family: font-raleway
+    font-weight: 200
+    text-transform: lowercase
+    text-align: center
+    color: #888
   
   h1
     font-size: 1.5em
-    text-transform: lowercase
-    text-align: center
     animation: fadeinfromtop 3s
-    color: #888
+    margin-bottom: 30px
   
   h2
     font-size: 1.2em
-    text-transform: lowercase
-    text-align: center
     animation: fadeinfrombottom 6s
     opacity: 1
-    color: #888
     
   @keyframes fadeinfromtop
     0% { 
@@ -41,12 +45,12 @@
       margin-top: 0;
     }
   
-  .quote
-    padding-top: 13%
-
 .about
   max-width: 600px
   margin: 0 auto
   
   .about-item
     margin-top: 40px
+  
+  img
+    width: 100%
