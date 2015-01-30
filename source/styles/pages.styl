@@ -1,6 +1,12 @@
 .homepage
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  
   .quote
-    padding-top: 10%
+    max-width: 50%;
+    
   
   h1,
   h2
@@ -23,26 +29,21 @@
   @keyframes fadeinfromtop
     0% { 
       opacity: 0;
-      margin-top: -30px;
     }
     
     100% {
       opacity: 1;
-      margin-top: 0;
     }
     
   @keyframes fadeinfrombottom
     0% { 
       opacity: 0;
-      margin-top: 100px;
     }
     30% {
       opacity: 0;
-      margin-top: 100px;
     }
     100% {
       opacity: 1;
-      margin-top: 0;
     }
   
 .about
