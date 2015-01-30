@@ -128,6 +128,7 @@ section {
 body {
   font-family: 'Source Sans Pro', 'Helvetica Neue', 'Helvetica', sans-serif;
   color: #444;
+  padding-bottom: 100px;
 }
 header {
   padding-top: 20px;
@@ -209,7 +210,7 @@ img {
   -webkit-flex-flow: row wrap;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  max-width: 1080px;
+  max-width: 600px;
   padding: 10px;
   margin: 30px auto 0 auto;
 }
@@ -294,10 +295,6 @@ img {
   100% {
     opacity: 1;
   }
-}
-.about {
-  max-width: 600px;
-  margin: 0 auto;
 }
 .about .about-item {
   margin-top: 40px;

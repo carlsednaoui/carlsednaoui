@@ -1,15 +1,13 @@
 /**
- * variables
- */
-/**
  body, header and footer
  */
 body {
   font-family: font-source;
   color: greyDark;
+  padding-bottom: 100px;
 }
 header {
-  padding-top: 20px;
+  padding-top: spacing;
   margin: 0 auto;
   text-align: center;
 }
