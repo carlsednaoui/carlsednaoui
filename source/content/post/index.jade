@@ -1,4 +1,4 @@
-extends ../templates/homepage
+extends ../../templates/homepage
 
 block head
   - var title = "Carl Sednaoui's articles"
@@ -6,12 +6,8 @@ block head
   - var url = "/"
 
 block content
-  h1 Latest posts
+  h1 Tadaa: here's all my posts
 
   each post in posts
     li
       a(href="#{post['href']}") #{post['title']}
-
-  
-  p
-    a(href="/post/") view all articles

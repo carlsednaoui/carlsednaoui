@@ -18,6 +18,11 @@ app.get('/:file', function(req, res){
 /**
 legacy tumblr route
 */
+app.get('/:folder/:file', function(req, res){
+  var folder = req.params.folder;
+  var file = req.params.file;
+  res.sendFile(path.join(__dirname, 'public', folder, file + '.html'));
+});
 
 app.get('/:folder/:timestamp/:file', function(req, res){
   var folder = req.params.folder;

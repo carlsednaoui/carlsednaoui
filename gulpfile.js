@@ -20,6 +20,11 @@ gulp.task('content', function(){
   var files = fs.readdirSync(POST_PATH);
   var posts = [];
   files.forEach(function(folder) {
+
+    // don't do this if you're looking at a file
+    // e.g. index.jade
+    if (fs.statSync(POST_PATH + '/' + folder).isFile()) return;
+
     // get legacy urls
     el = fs.readdirSync(POST_PATH + '/' + folder);
 
@@ -39,6 +44,10 @@ gulp.task('content', function(){
   gulp.src('source/content/{,post/*}/*.jade')
     .pipe(jade({ pretty: true, locals: locals }))
     .pipe(gulp.dest('public'));
+
+  gulp.src('source/content/post/*.jade')
+    .pipe(jade({ pretty: true, locals: locals }))
+    .pipe(gulp.dest('public/post'));
 });
 
 

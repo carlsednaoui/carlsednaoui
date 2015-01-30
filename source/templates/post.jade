@@ -7,6 +7,9 @@ html(lang="en")
     .blog-post
       block content
 
+      script.
+        $("a:has(img)").addClass("js-imageLink");
+
       #disqus_thread
       script.
         var disqus_shortname = 'carlsednaoui';
