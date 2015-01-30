@@ -21,16 +21,6 @@ header .name h1 {
   text-transform: uppercase;
   margin-bottom: 0;
 }
-header .name:after {
-  content: "";
-  background-image: url("/images/croissant.svg");
-  background-repeat: no-repeat;
-  background-size: 20px;
-  display: inline-block;
-  width: 20px;
-  height: 48px;
-  margin-left: -15px;
-}
 header li {
   display: inline-block;
 }

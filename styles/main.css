@@ -142,16 +142,6 @@ header .name h1 {
   text-transform: uppercase;
   margin-bottom: 0;
 }
-header .name:after {
-  content: "";
-  background-image: url("/images/croissant.svg");
-  background-repeat: no-repeat;
-  background-size: 20px;
-  display: inline-block;
-  width: 20px;
-  height: 48px;
-  margin-left: -15px;
-}
 header li {
   display: inline-block;
 }
@@ -227,8 +217,20 @@ img {
           flex: 2 0px;
   padding: 0 10px;
 }
+.homepage {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 70vh;
+}
 .homepage .quote {
-  padding-top: 10%;
+  max-width: 50%;
 }
 .homepage h1,
 .homepage h2 {
@@ -253,49 +255,39 @@ img {
 @-webkit-keyframes fadeinfromtop {
   0% {
     opacity: 0;
-    margin-top: -30px;
   }
   100% {
     opacity: 1;
-    margin-top: 0;
   }
 }
 @keyframes fadeinfromtop {
   0% {
     opacity: 0;
-    margin-top: -30px;
   }
   100% {
     opacity: 1;
-    margin-top: 0;
   }
 }
 @-webkit-keyframes fadeinfrombottom {
   0% {
     opacity: 0;
-    margin-top: 100px;
   }
   30% {
     opacity: 0;
-    margin-top: 100px;
   }
   100% {
     opacity: 1;
-    margin-top: 0;
   }
 }
 @keyframes fadeinfrombottom {
   0% {
     opacity: 0;
-    margin-top: 100px;
   }
   30% {
     opacity: 0;
-    margin-top: 100px;
   }
   100% {
     opacity: 1;
-    margin-top: 0;
   }
 }
 .about {
