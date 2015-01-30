@@ -140,14 +140,16 @@ header .name h1 {
   font-weight: 200;
   font-size: 1.8em;
   text-transform: uppercase;
-  margin-bottom: 0;
+  margin-bottom: 10px;
+  color: #888;
 }
 header li {
   display: inline-block;
 }
-header a {
+header li a {
   text-decoration: none;
-  margin-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   color: #888;
   font-weight: 200;
 }
@@ -155,27 +157,33 @@ h1 {
   font-size: 2.4em;
   padding-top: 20px;
   margin-bottom: 50px;
-  font-weight: 600;
+  font-weight: 400;
+  font-family: 'Raleway', 'Helvetica Neue', 'Helvetica', sans-serif;
 }
 h2 {
   font-size: 1.8em;
   padding-top: 20px;
   margin-bottom: 40px;
-  font-weight: 600;
+  font-weight: 400;
+  font-family: 'Raleway', 'Helvetica Neue', 'Helvetica', sans-serif;
 }
 h3 {
   font-size: 1.4em;
   padding-top: 20px;
   margin-bottom: 30px;
+  font-weight: 300;
+  font-family: 'Raleway', 'Helvetica Neue', 'Helvetica', sans-serif;
 }
 p {
   font-size: 1.15em;
   line-height: 1.8em;
   margin-bottom: 20px;
+  font-weight: 300;
 }
 li {
   font-size: 1.1em;
   line-height: 1.5em;
+  font-weight: 300;
 }
 h1 a,
 h2 a,
@@ -227,10 +235,7 @@ img {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 70vh;
-}
-.homepage .quote {
-  max-width: 50%;
+  min-height: 60vh;
 }
 .homepage h1,
 .homepage h2 {
@@ -307,19 +312,22 @@ img {
 }
 .blog-post h1 {
   margin-top: 30px;
+  padding-bottom: 30px;
   font-size: 2em;
+  text-align: center;
+  line-height: 45px;
 }
 .blog-post h2 {
   font-size: 1.5em;
   margin-bottom: 5px;
 }
 .blog-post p {
-  font-size: 1.3em;
-  line-height: 1.6em;
+  font-size: 1.2em;
+  line-height: 1.7em;
   margin-bottom: 30px;
 }
 .blog-post p strong {
-  font-weight: 600;
+  font-weight: 400;
 }
 .blog-post ul {
   margin-bottom: 30px;
@@ -360,6 +368,10 @@ img {
   background-image: url("/images/icon-twitter.png");
   background-size: 15px;
   background-repeat: no-repeat;
+}
+.js-imageLink {
+  text-decoration: none;
+  border-bottom: none;
 }
 /**
  other styles

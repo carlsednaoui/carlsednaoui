@@ -44,10 +44,9 @@
     <meta name="twitter:description" content="Here is min-s: A new way to discover visual content on Tumblr.">
   </head>
   <body>
-    <header><a href="/">
-        <div class="name">
-          <h1>Carl Sednaoui</h1>
-        </div></a>
+    <header>
+      <div class="name"><a href="/">
+          <h1>Carl Sednaoui</h1></a></div>
       <ul>
         <li><a href="/articles">Writing</a></li>
         <li><a href="/about">About</a></li>
@@ -69,6 +68,10 @@
 <p>P.S.: You should follow me on <a href="https://twitter.com/CarlSednaoui">Twitter here</a>.</p>
 
       </div>
+      <script>
+        $("a:has(img)").addClass("js-imageLink");
+        
+      </script>
       <div id="disqus_thread"></div>
       <script>
         var disqus_shortname = 'carlsednaoui';

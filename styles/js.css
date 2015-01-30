@@ -19,3 +19,7 @@
   background-size: 15px;
   background-repeat: no-repeat;
 }
+.js-imageLink {
+  text-decoration: none;
+  border-bottom: none;
+}

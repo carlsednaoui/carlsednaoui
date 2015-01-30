@@ -44,10 +44,9 @@
     <meta name="twitter:description" content="Every day, you spend time reading interesting blog posts and comments on HN.">
   </head>
   <body>
-    <header><a href="/">
-        <div class="name">
-          <h1>Carl Sednaoui</h1>
-        </div></a>
+    <header>
+      <div class="name"><a href="/">
+          <h1>Carl Sednaoui</h1></a></div>
       <ul>
         <li><a href="/articles">Writing</a></li>
         <li><a href="/about">About</a></li>
@@ -63,6 +62,10 @@
 <p>So here’s my challenge to you, don’t be a passive reader. Don’t be that guy (or gal). Next time you’re reading a blog post you enjoy (or an article or comment or whatever), reach out to the author - you never know, maybe you’ll get a response. And maybe, in a distant future, you will have created a new genuine and valuable relationship.</p>
 
       </div>
+      <script>
+        $("a:has(img)").addClass("js-imageLink");
+        
+      </script>
       <div id="disqus_thread"></div>
       <script>
         var disqus_shortname = 'carlsednaoui';

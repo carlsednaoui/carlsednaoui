@@ -44,10 +44,9 @@
     <meta name="twitter:description" content="Here’s a peek at Google’s latest SERP A/B test.">
   </head>
   <body>
-    <header><a href="/">
-        <div class="name">
-          <h1>Carl Sednaoui</h1>
-        </div></a>
+    <header>
+      <div class="name"><a href="/">
+          <h1>Carl Sednaoui</h1></a></div>
       <ul>
         <li><a href="/articles">Writing</a></li>
         <li><a href="/about">About</a></li>
@@ -65,6 +64,10 @@
 <p>I love how much cleaner the variation looks and wonder how this will impact ad click-through rates.</p>
 
       </div>
+      <script>
+        $("a:has(img)").addClass("js-imageLink");
+        
+      </script>
       <div id="disqus_thread"></div>
       <script>
         var disqus_shortname = 'carlsednaoui';

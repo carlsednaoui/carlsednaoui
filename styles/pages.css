@@ -8,10 +8,7 @@
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 70vh;
-}
-.homepage .quote {
-  max-width: 50%;
+  min-height: 60vh;
 }
 .homepage h1,
 .homepage h2 {

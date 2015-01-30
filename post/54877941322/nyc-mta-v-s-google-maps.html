@@ -44,10 +44,9 @@
     <meta name="twitter:description" content="NYC: MTA v.s. Google Maps">
   </head>
   <body>
-    <header><a href="/">
-        <div class="name">
-          <h1>Carl Sednaoui</h1>
-        </div></a>
+    <header>
+      <div class="name"><a href="/">
+          <h1>Carl Sednaoui</h1></a></div>
       <ul>
         <li><a href="/articles">Writing</a></li>
         <li><a href="/about">About</a></li>
@@ -60,6 +59,10 @@
 <p><a href="/images/posts/nyc-map.gif"><img src="/images/posts/nyc-map.gif" alt=""></a></p>
 
       </div>
+      <script>
+        $("a:has(img)").addClass("js-imageLink");
+        
+      </script>
       <div id="disqus_thread"></div>
       <script>
         var disqus_shortname = 'carlsednaoui';

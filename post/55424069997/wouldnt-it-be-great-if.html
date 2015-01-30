@@ -44,10 +44,9 @@
     <meta name="twitter:description" content="Couple nights ago, over dinner, my girlfriend and I were talking about startups and this phrase came up...">
   </head>
   <body>
-    <header><a href="/">
-        <div class="name">
-          <h1>Carl Sednaoui</h1>
-        </div></a>
+    <header>
+      <div class="name"><a href="/">
+          <h1>Carl Sednaoui</h1></a></div>
       <ul>
         <li><a href="/articles">Writing</a></li>
         <li><a href="/about">About</a></li>
@@ -66,6 +65,10 @@
 <p>How do you come up with new ideas? If you’ve ever done anything similar, <a href="https://twitter.com/carlsednaoui">I’d love to hear about it!</a></p>
 
       </div>
+      <script>
+        $("a:has(img)").addClass("js-imageLink");
+        
+      </script>
       <div id="disqus_thread"></div>
       <script>
         var disqus_shortname = 'carlsednaoui';
